@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tabla</th>
+        </tr>
+    </thead>
+    <tbody>
+        <cdk-virtual-scroll-viewport [itemSize]="50" class="table-viewport">
+            <tr *cdkVirtualFor="let team of data">
+                <td>{{team.name}}</td>
+                <td>{{team.members}}</td>
+                <td>{{team.created | date:'dd/MM/yy'}}</td>
+            </tr>
+        </cdk-virtual-scroll-viewport>
+    </tbody>
+</table>
+
